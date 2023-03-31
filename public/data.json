@@ -1,0 +1,98 @@
+[
+  {
+    "productId": 1,
+    "productName": "Bruen-Kautzer",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=659",
+    "productDescription": "Other joint mobilization",
+    "brand": "Linklinks",
+    "color": "Puce",
+    "amount": 12.00,
+    "rating": "3.5",
+    "comments": "7140"
+  },
+  {
+    "productId": 2,
+    "productName": "Ratke Inc",
+    "productTag": "Shirt",
+    "productImage": "https://picsum.photos/400?image=261",
+    "productDescription": "Rectorectostomy",
+    "brand": "Buzzshare",
+    "color": "Blue",
+    "amount": 18.00,
+    "rating": "4.9",
+    "comments": "87039"
+  },
+  {
+    "productId": 3,
+    "productName": "Morar, Kihn and Walter",
+    "productTag": "Shirt",
+    "productImage": "https://picsum.photos/400?image=921",
+    "productDescription": "Pyeloscopy",
+    "brand": "Layo",
+    "color": "Teal",
+    "amount": 13.00,
+    "rating": "5",
+    "comments": "99"
+  },
+  {
+    "productId": 4,
+    "productName": "Crist-Tremblay",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=753",
+    "productDescription": "Homograft to skin",
+    "brand": "Latz",
+    "color": "Purple",
+    "amount": 22.00,
+    "rating": "5",
+    "comments": "69"
+  },
+  {
+    "productId": 5,
+    "productName": "Franecki Group",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=924",
+    "productDescription": "Other diaphragm repair",
+    "brand": "Jaxworks",
+    "color": "Indigo",
+    "amount": 32.00,
+    "rating": "2.5",
+    "comments": "2356"
+  },
+  {
+    "productId": 6,
+    "productName": "Hermiston, Huels and Casper",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=340",
+    "productDescription": "Cryosurg destr rect les",
+    "brand": "Leenti",
+    "color": "Crimson",
+    "amount": "85",
+    "rating": "4.9",
+    "comments": "2356"
+  },
+  {
+    "productId": 7,
+    "productName": "Wolf-Nitzsche",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=583",
+    "productDescription": "Remov ext immobilization",
+    "brand": "Eare",
+    "color": "Orange",
+    "amount": 12.00,
+    "rating": "3",
+    "comments": "2356"
+  },
+  {
+    "productId": 8,
+    "productName": "Johns Inc",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=913",
+    "productDescription": "Cont inv mec ven 96+ hrs",
+    "brand": "Skiptube",
+    "color": "Maroon",
+    "amount": 18.00,
+    "rating": "4.5",
+    "comments": "2356"
+  }
+]

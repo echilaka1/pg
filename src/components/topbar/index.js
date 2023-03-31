@@ -8,8 +8,8 @@ export default function NavBar() {
         <input className="nosubmit" type="search" placeholder="Search..." />
       </form>
       <div>
-        <img src={require("../../assets/images/cart.png")} alt="" />
-        <img src={require("../../assets/images/notification.png")} alt="" />
+        <img src={require("../../assets/images/cart.png")} alt="cart icon" />
+        <img src={require("../../assets/images/notification.png")} alt="notification icon" />
       </div>
     </div>
   );
