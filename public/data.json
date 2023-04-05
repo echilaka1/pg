@@ -39,7 +39,7 @@
     "productId": 4,
     "productName": "Crist-Tremblay",
     "productTag": "New",
-    "productImage": "https://picsum.photos/400?image=753",
+    "productImage": "https://picsum.photos/400?image=924",
     "productDescription": "Homograft to skin",
     "brand": "Latz",
     "color": "Purple",
@@ -94,5 +94,53 @@
     "amount": 18.00,
     "rating": "4.5",
     "comments": "2356"
+  },
+  {
+    "productId": 9,
+    "productName": "Hermiston, Huels and Casper",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=340",
+    "productDescription": "Cryosurg destr rect les",
+    "brand": "Leenti",
+    "color": "Crimson",
+    "amount": "85",
+    "rating": "4.9",
+    "comments": "2356"
+  },
+  {
+    "productId": 10,
+    "productName": "Wolf-Nitzsche",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=583",
+    "productDescription": "Remov ext immobilization",
+    "brand": "Eare",
+    "color": "Orange",
+    "amount": 12.00,
+    "rating": "3",
+    "comments": "2356"
+  },
+  {
+    "productId": 11,
+    "productName": "Johns Inc",
+    "productTag": "New",
+    "productImage": "https://picsum.photos/400?image=913",
+    "productDescription": "Cont inv mec ven 96+ hrs",
+    "brand": "Skiptube",
+    "color": "Maroon",
+    "amount": 18.00,
+    "rating": "4.5",
+    "comments": "2356"
+  },
+  {
+    "productId": 12,
+    "productName": "Morar, Kihn and Walter",
+    "productTag": "Shirt",
+    "productImage": "https://picsum.photos/400?image=921",
+    "productDescription": "Pyeloscopy",
+    "brand": "Layo",
+    "color": "Teal",
+    "amount": 13.00,
+    "rating": "5",
+    "comments": "99"
   }
 ]

@@ -1,5 +1,5 @@
 .main-container {
-  width: 350px;
+  width: 380px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -9,7 +9,9 @@
 }
 
 .sub-container {
-  position:relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 

@@ -1,0 +1,38 @@
+.sentinel {
+  height: 1px;
+  width: 100%;
+}
+
+.content-header {
+  height: 50px;
+  color: #fff;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.content-header.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  margin-top: 65px;
+  width: 94%;
+  padding: 0 10px;
+  background-color: #fdfcfd;
+}
+
+.all-product-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all-product-header h1 {
+  color: #2A2D40;
+  font-size:16px;
+}
+
+.all-product-header p {
+  color: #4AB197;
+  font-size:12px;
+}

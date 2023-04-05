@@ -1,27 +1,44 @@
 .top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  width: 94.3%;
+  height: 50px;
+  background-color: transparent;
+}
+
+.top-bar.fixed {
+  position: fixed;
+  top: 0;
+  height: 65px;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav-detail {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 70px;
-  width: 94.3%;
-  position: fixed;
-  top: 0;
+  padding: 15px 10px;
 }
 
-.top-bar div {
+.nav-detail div {
   display: flex;
   align-items: center;
 }
 
-.top-bar form.nosubmit {
+.nav-detail form.nosubmit {
   border: none;
   padding: 0;
 }
 
-.top-bar input.nosubmit {
+.nav-detail input.nosubmit {
   width: 230px;
   border: 1px solid #ededed;
   border-radius: 5px;
@@ -33,7 +50,7 @@
     no-repeat 13px center;
 }
 
-.top-bar input.nosubmit:focus {
+.nav-detail input.nosubmit:focus {
   outline: none;
   border: 1px solid #ededed;
   color: #000;
@@ -42,11 +59,13 @@
     no-repeat 13px center;
 }
 
-.top-bar img {
-  width: 30px;
-  height: 30px;
+.nav-detail img {
+  width: 25px;
+  height: 25px;
 }
 
-.top-bar img:nth-child(1) {
+.nav-detail img:nth-child(1) {
   margin-right: 10px;
+  width: 20px;
+  height: 20px;
 }
