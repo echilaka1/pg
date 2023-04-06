@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import Layout from "../../components/backbone";
 import { productList } from "../../services/data";
 import AnimatedHeroBackground from "../../components/hero";
@@ -15,6 +15,7 @@ import FixedNavbar from "../../components/topbar";
 import { useNavigate } from "react-router-dom";
 
 export default function EntryPage() {
+  const [scrolled, setScrolled] = useState(false);
   const navigate = useNavigate();
   const activeIndex = 0;
 
@@ -24,10 +25,25 @@ export default function EntryPage() {
     navigate("/product/" + product.productId);
   };
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <Layout>
-      <FixedNavbar />
-
+      <FixedNavbar scrolled={{scrolled}} />
       <div className="content-area">
         <AnimatedHeroBackground />
         <div className="category">

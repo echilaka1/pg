@@ -1,21 +1,18 @@
 .top-bar {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 90;
-  transition: all 0.3s ease;
   width: 99.7%;
   height: 50px;
+  position: fixed;
+  background-color: transparent;
+  transition: background-color 300ms ease;
+  z-index: 10;
 }
 
-.top-bar.fixed {
-  position: fixed;
-  top: 0;
+.top-bar.scrolled {
+  background-color: #fff;
   height: 65px;
-  width: 100%;
-  left: 0;
-  z-index: 1;
 }
 
 .nav-detail {
