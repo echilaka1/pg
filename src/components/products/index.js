@@ -2,7 +2,6 @@ import React from "react";
 import "./products.css";
 
 export default function AllProducts({ product, onClick }) {
-  // console.log(product);
   return (
     <div className="product-card">
       <div className="product-image">

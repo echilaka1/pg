@@ -1,5 +1,3 @@
-# TeamApt Frontend Test
-
 ## Front Technologies Used
 
 - React
@@ -42,6 +40,7 @@ $ npm start or yarn start
 |  |  ├─hero
 |  |  ├─NavFooter
 |  |  ├─products
+|  |  ├─Staggered
 |  |  ├─topbar
 |  ├─ routes/
 |  |  ├─routes.js

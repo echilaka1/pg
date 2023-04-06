@@ -9,8 +9,6 @@ export default function ProductDescription() {
   const { id } = useParams();
   const product = productList?.find((p) => p.productId === parseInt(id));
 
-  console.log(product);
-
   if (!product) {
     return <div>Product not found</div>;
   }
