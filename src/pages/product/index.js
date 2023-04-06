@@ -85,7 +85,7 @@ export default function ProductDescription() {
               </span>
             </div>
             <Tabs>
-              <div className="d-flex">
+              <div className="d-flex first">
                 <p>
                   Brand: <span>{product?.brand}</span>
                 </p>
@@ -93,26 +93,35 @@ export default function ProductDescription() {
                   Color: <span>{product?.color}</span>
                 </p>
               </div>
-              <div className="d-flex">
+              <div className="d-flex one">
                 <p>
-                  Category: <span>{product?.brand}</span>
+                  Category: <span>Casual Shirt</span>
                 </p>
                 <p>
-                  Material: <span>{product?.color}</span>
-                </p>
-              </div>
-              <div className="d-flex">
-                <p>
-                  Condition: <span>{product?.brand}</span>
-                </p>
-                <p>
-                  Heavy: <span>{product?.color}</span>
+                  Material: <span>Polyester</span>
                 </p>
               </div>
-              <br/>
-              <hr/>
-              <br/>
-              <h1>Description:</h1>
+              <div className="d-flex two">
+                <p>
+                  Condition: <span>New</span>
+                </p>
+                <p>
+                  Heavy: <span>200 g</span>
+                </p>
+              </div>
+              <br />
+              <hr />
+              <br />
+              <h1 className="desc-h1">Description:</h1>
+              <ul>
+                <li>Long-sleeve dress shirt in classic fit featuring button down collar</li>
+                <li>Patch Pocket on Left Chest</li>
+                <li>Durable Combination Cotton Fabric</li>
+                <li>Comfortable and quality dress shirt</li>
+                <li>Go to Classic button down shirt for all special occasions</li>
+              </ul>
+
+              <p className="chat">Chat us if there's anything you need to ask about the product :)</p>
             </Tabs>
           </div>
         </Staggered>
