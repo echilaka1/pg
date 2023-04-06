@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "../../components/backbone";
 import { productList } from "../../services/data";
 import AnimatedHeroBackground from "../../components/hero";
@@ -16,6 +16,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function EntryPage() {
   const [scrolled, setScrolled] = useState(false);
+  const heroRef = useRef(null);
   const navigate = useNavigate();
   const activeIndex = 0;
 
@@ -25,27 +26,34 @@ export default function EntryPage() {
     navigate("/product/" + product.productId);
   };
 
-
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const heroVisible = entries[0].isIntersecting;
+        setScrolled(!heroVisible);
+      },
+      {
+        threshold: 0,
       }
-    };
+    );
 
-    window.addEventListener('scroll', handleScroll);
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      if (heroRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        observer.unobserve(heroRef.current);
+      }
     };
   }, []);
 
   return (
     <Layout>
-      <FixedNavbar scrolled={{scrolled}} />
+      <FixedNavbar scrolled={{ scrolled }} />
       <div className="content-area">
-        <AnimatedHeroBackground />
+        <AnimatedHeroBackground ref={heroRef} />
         <div className="category">
           <div className="icons-container">
             <div className="icon-item">

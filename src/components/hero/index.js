@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef  } from "react";
 import { useSprings, animated } from "react-spring";
 import { useSwipeable } from "react-swipeable";
 import "./hero.css";
 import heroBg from "../../assets/images/hero-background.png";
 import heroBg2 from "../../assets/images/hero.png";
 
-const AnimatedHeroBackground = () => {
+const AnimatedHeroBackground = forwardRef((props, ref) => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const backgrounds = [`url(${heroBg})`, `url(${heroBg2})`];
@@ -38,7 +38,7 @@ const AnimatedHeroBackground = () => {
   );
 
   return (
-      <div className="hero-container">
+      <div className="hero-container" ref={ref}>
         <div {...swipeHandlers}>
           {springs.map((props, index) => (
             <animated.div
@@ -63,6 +63,6 @@ const AnimatedHeroBackground = () => {
         </div>
       </div>
   );
-};
+});
 
 export default AnimatedHeroBackground;
