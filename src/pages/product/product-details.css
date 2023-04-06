@@ -23,7 +23,7 @@
   left: 0;
   transition: all 0.3s ease;
   background-color: white;
-  z-index: 1;
+  z-index: 1000;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -57,7 +57,11 @@
 }
 
 .main-product-details {
-  padding: 60px 10px;
+  position: relative;
+  flex-grow: 1;
+  overflow-y: auto; /* Make the content area scrollable */
+  z-index: 2;
+  padding: 60px 10px 50px 10px;
 }
 
 .product-image-wrapper {
@@ -124,6 +128,23 @@
 .all-desc .rate-price-desc span {
   font-size: 14px;
   color: #9da2ad;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.d-flex p {
+  margin: 0;
+  color: #9da2ad;
+  font-size: 14px;
+}
+
+.d-flex p span {
+  color: black;
 }
 
 .footer-product {

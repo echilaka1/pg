@@ -85,7 +85,34 @@ export default function ProductDescription() {
               </span>
             </div>
             <Tabs>
-              hdfhdd
+              <div className="d-flex">
+                <p>
+                  Brand: <span>{product?.brand}</span>
+                </p>
+                <p>
+                  Color: <span>{product?.color}</span>
+                </p>
+              </div>
+              <div className="d-flex">
+                <p>
+                  Category: <span>{product?.brand}</span>
+                </p>
+                <p>
+                  Material: <span>{product?.color}</span>
+                </p>
+              </div>
+              <div className="d-flex">
+                <p>
+                  Condition: <span>{product?.brand}</span>
+                </p>
+                <p>
+                  Heavy: <span>{product?.color}</span>
+                </p>
+              </div>
+              <br/>
+              <hr/>
+              <br/>
+              <h1>Description:</h1>
             </Tabs>
           </div>
         </Staggered>

@@ -4,7 +4,7 @@ import "./products.css";
 export default function AllProducts({ product, onClick }) {
   return (
     <div className="product-card">
-      <div className="product-image">
+      <div className="product-image" onClick={onClick} style={{cursor: "pointer"}}>
         <img src={product?.productImage[0]} alt={product?.productName} />
       </div>
       <div className="product-content">
