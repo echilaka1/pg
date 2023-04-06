@@ -5,6 +5,9 @@
 - React
 - JavaScript
 - React Router
+- React Spring
+- React Transition Group
+- React Swipeable
 
 ## Commands
 
@@ -35,9 +38,15 @@ $ npm start or yarn start
 |  |  ├-images
 |  ├─ components/
 |  |  ├─backbone
+|  |  ├─ContentHeader
+|  |  ├─hero
+|  |  ├─NavFooter
+|  |  ├─products
 |  |  ├─topbar
 |  ├─ routes/
 |  |  ├─routes.js
+|  ├─ services/
+|  |  ├─data.js
 │  ├─ pages/
 |  |  ├─ landing
 |  |  ├─ product

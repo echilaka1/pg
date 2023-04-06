@@ -33,14 +33,20 @@ const FixedNavbar = () => {
             <input className="nosubmit" type="search" placeholder="Search..." />
           </form>
           <div>
-            <img
-              src={require("../../assets/images/cart.png")}
-              alt="cart icon"
-            />
-            <img
-              src={require("../../assets/images/notification.png")}
-              alt="notification icon"
-            />
+            <div className="cart-icon-wrapper">
+              <img
+                src={require("../../assets/images/cart.png")}
+                alt="cart icon"
+              />
+              <span className="badge">1</span>
+            </div>
+            <div className="cart-icon-wrapper">
+              <img
+                src={require("../../assets/images/notification.png")}
+                alt="notification icon"
+              />
+              <span className="badge">9+</span>
+            </div>
           </div>
         </div>
       </div>
