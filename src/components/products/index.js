@@ -6,7 +6,7 @@ export default function AllProducts({ product, onClick }) {
   return (
     <div className="product-card">
       <div className="product-image">
-        <img src={product?.productImage} alt={product?.productName} />
+        <img src={product?.productImage[0]} alt={product?.productName} />
       </div>
       <div className="product-content">
         <h1>{product?.productTag}</h1>

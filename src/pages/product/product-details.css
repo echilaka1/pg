@@ -18,12 +18,13 @@
 .cart-top {
   position: fixed;
   top: 0;
-  height: 65px;
+  height: 50px;
   width: 100%;
   left: 0;
   transition: all 0.3s ease;
   background-color: white;
   z-index: 1;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .cart-nav {
@@ -56,7 +57,73 @@
 }
 
 .main-product-details {
-    padding: 50px 0;
+  padding: 60px 10px;
+}
+
+.product-image-wrapper {
+  height: 300px;
+  max-width: 600px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.product-image-wrapper .main-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  opacity: 0.5;
+  display: block;
+}
+
+.thumbnails {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.thumbnails img {
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-details-wrapper .thrift {
+  display: flex;
+  color: #d0d3d4;
+  align-items: center;
+  font-size: 14px;
+}
+
+.product-details-wrapper .thrift img {
+  width: 20px;
+  height: auto;
+}
+
+.product-details-wrapper .thrift span {
+  margin-left: 5px;
+}
+
+.all-desc .p-name {
+  font-size: 20px;
+  margin: 8px 0 15px 0;
+}
+
+.all-desc .rate-price-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.all-desc .rate-price-desc span {
+  font-size: 14px;
+  color: #9da2ad;
 }
 
 .footer-product {
@@ -75,7 +142,7 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding-top: 10px;
+  padding-top: 20px;
 }
 
 .product-footer .price {
