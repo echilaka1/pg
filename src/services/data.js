@@ -1,4 +1,4 @@
-[
+export const productList = [
   {
     "productId": 1,
     "productName": "Bruen-Kautzer",
@@ -67,7 +67,7 @@
     "productDescription": "Cryosurg destr rect les",
     "brand": "Leenti",
     "color": "Crimson",
-    "amount": "85",
+    "amount": 85,
     "rating": "4.9",
     "comments": "2356"
   },
@@ -103,7 +103,7 @@
     "productDescription": "Cryosurg destr rect les",
     "brand": "Leenti",
     "color": "Crimson",
-    "amount": "85",
+    "amount": 85,
     "rating": "4.9",
     "comments": "2356"
   },

@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Layout from "../../components/backbone";
-import { getProducts } from "../../services/products";
+import { productList } from "../../services/data";
 import AnimatedHeroBackground from "../../components/hero";
 import category from "../../assets/images/category.png";
 import flight from "../../assets/images/flight.png";
@@ -12,26 +12,17 @@ import FixedNavFooter from "../../components/NavFooter";
 import ContentHeader from "../../components/ContentHeader";
 import AllProducts from "../../components/products";
 import FixedNavbar from "../../components/topbar";
+import { useNavigate } from "react-router-dom";
 
 export default function EntryPage() {
-  // eslint-disable-next-line no-unused-vars
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
   const activeIndex = 0;
-  //Get books from API
-  useEffect(() => {
-    let mounted = true;
-    setIsLoading(true);
-    getProducts().then((products) => {
-      if (mounted) {
-        setProducts(products);
-        setIsLoading(false);
-      }
-    });
-    return () => (mounted = false);
-  }, []);
 
   const backgrounds = [0, 1, 2];
+
+  const productPage = (product) => {
+    navigate("/product/" + product.productId);
+  };
 
   return (
     <Layout>
@@ -74,13 +65,14 @@ export default function EntryPage() {
         <div className="product-bg">
           <ContentHeader />
           <div className="product-container">
-            {isLoading ? (
-              <p>Loading ...</p>
-            ) : (
-              products.map((product) => (
-                <AllProducts key={product.productId} product={product} />
-              ))
-            )}
+            {productList.map((product) => (
+              <React.Fragment key={product.productId}>
+                <AllProducts
+                  onClick={() => productPage(product)}
+                  product={product}
+                />
+              </React.Fragment>
+            ))}
           </div>
         </div>
       </div>
