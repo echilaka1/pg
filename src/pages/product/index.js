@@ -4,6 +4,7 @@ import { productList } from "../../services/data";
 import { useParams } from "react-router-dom";
 import "./product-details.css";
 import Staggered from "../../components/Staggered/staggered";
+import Tabs from "../../components/Tabs";
 
 export default function ProductDescription() {
   const { id } = useParams();
@@ -83,6 +84,9 @@ export default function ProductDescription() {
                 ● <span style={{ marginLeft: "15px" }}>2.9k+ Sold</span>
               </span>
             </div>
+            <Tabs>
+              hdfhdd
+            </Tabs>
           </div>
         </Staggered>
       </div>
