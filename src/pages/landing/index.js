@@ -27,25 +27,17 @@ export default function EntryPage() {
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const heroVisible = entries[0].isIntersecting;
-        setScrolled(!heroVisible);
-      },
-      {
-        threshold: 0,
+    const handleScroll = () => {
+      if (window.scrollY > heroRef.current.offsetHeight) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
       }
-    );
+    };
 
-    if (heroRef.current) {
-      observer.observe(heroRef.current);
-    }
-
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      if (heroRef.current) {
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        observer.unobserve(heroRef.current);
-      }
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
