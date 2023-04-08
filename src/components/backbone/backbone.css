@@ -11,7 +11,7 @@
 .sub-container {
   display: flex;
   flex-direction: column;
-  height: 89vh;
+  height: 100vh;
   position: relative;
   overflow-y: scroll;
 }
