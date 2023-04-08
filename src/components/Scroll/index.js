@@ -1,10 +1,9 @@
-import { createContext, useState, useEffect, useRef } from 'react';
+import { createContext, useState, useEffect } from "react";
 
 export const ScrollContext = createContext();
 
-export const ScrollProvider = ({ children }) => {
+export const ScrollProvider = ({ children, subContainerRef }) => {
   const [scrolled, setScrolled] = useState(false);
-  const subContainerRef = useRef(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -13,22 +12,20 @@ export const ScrollProvider = ({ children }) => {
     };
 
     if (subContainerRef.current) {
-      subContainerRef.current.addEventListener('scroll', onScroll);
+      subContainerRef.current.addEventListener("scroll", onScroll);
     }
 
     return () => {
       if (subContainerRef.current) {
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        subContainerRef.current.removeEventListener('scroll', onScroll);
+        subContainerRef.current.removeEventListener("scroll", onScroll);
       }
     };
   }, [subContainerRef]);
 
   return (
-    <ScrollContext.Provider value={{ scrolled, subContainerRef }}>
-      <div className="sub-container" ref={subContainerRef}>
-        {children}
-      </div>
+    <ScrollContext.Provider value={{ scrolled }}>
+      {children}
     </ScrollContext.Provider>
   );
 };
