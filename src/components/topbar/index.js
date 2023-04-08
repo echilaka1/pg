@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./navbar.css";
+import { ScrollContext } from "../Scroll";
 
-const FixedNavbar = ({scrolled}) => {
+const FixedNavbar = () => {
+  const { scrolled } = useContext(ScrollContext);
   return (
-    <div className={`top-bar ${scrolled ? 'scrolled' : ''}`}>
+    <div className={`top-bar ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-detail">
         <form className="nosubmit">
           <input className="nosubmit" type="search" placeholder="Search..." />

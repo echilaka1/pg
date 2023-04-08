@@ -1,11 +1,11 @@
-import React, { useState, useEffect, forwardRef  } from "react";
+import React, { useState, useEffect } from "react";
 import { useSprings, animated } from "react-spring";
 import { useSwipeable } from "react-swipeable";
 import "./hero.css";
 import heroBg from "../../assets/images/hero-background.png";
 import heroBg2 from "../../assets/images/hero.png";
 
-const AnimatedHeroBackground = forwardRef((props, ref) => {
+const AnimatedHeroBackground = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const backgrounds = [`url(${heroBg})`, `url(${heroBg2})`];
@@ -38,20 +38,20 @@ const AnimatedHeroBackground = forwardRef((props, ref) => {
   );
 
   return (
-      <div className="hero-container" ref={ref}>
-        <div {...swipeHandlers}>
-          {springs.map((props, index) => (
-            <animated.div
-              key={index}
-              className="hero-bg"
-              style={{
-                ...props,
-                background: backgrounds[index],
-              }}
-            />
-          ))}
+    <div className="hero-container">
+      <div {...swipeHandlers}>
+        {springs.map((props, index) => (
+          <animated.div
+            key={index}
+            className="hero-bg"
+            style={{
+              ...props,
+              background: backgrounds[index],
+            }}
+          />
+        ))}
 
-          {/* <div className="indicator-container">
+        {/* <div className="indicator-container">
        {backgrounds.map((_, index) => (
          <div
            key={index}
@@ -60,9 +60,9 @@ const AnimatedHeroBackground = forwardRef((props, ref) => {
          />
        ))}
      </div> */}
-        </div>
       </div>
+    </div>
   );
-});
+};
 
 export default AnimatedHeroBackground;

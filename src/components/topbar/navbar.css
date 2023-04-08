@@ -8,10 +8,20 @@
   background-color: transparent;
   transition: background-color 300ms ease;
   z-index: 10;
+
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: 10; */
 }
 
 .top-bar.scrolled {
   background-color: #fff;
+  /* background-color: rgba(0, 0, 0, 0.8); */
   height: 65px;
 }
 

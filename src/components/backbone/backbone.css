@@ -13,6 +13,7 @@
   flex-direction: column;
   height: 89vh;
   position: relative;
+  overflow-y: scroll;
 }
 
 
